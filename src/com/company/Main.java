@@ -13,13 +13,22 @@ public class Main {
         al.add("D");
         al.add("F");
 
-        System.out.print("OG contents of list: ");
+        System.out.print("OG contents of list: \n");
         Iterator itr = al.iterator();
         while (itr.hasNext()) {
             Object element = itr.next();
-            if (element.equals("C")) {
-                System.out.print(element + " ");
-            }
+            System.out.print(element + " ");
+        }
+
+        // Print out list backwards.
+
+        ListIterator litr = al.listIterator(al.size());
+        System.out.println("" + "\n");
+        System.out.println("Next List:");
+
+        while (litr.hasPrevious()) {
+            Object element = litr.previous();
+            System.out.print(element + " ");
         }
     }
 }
